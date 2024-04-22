@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 
-body {
+.body {
     height: 100vh;
     font-family: "Poppins", sans-serif;
-    background-color: #E4E5E7;
+    background-color: #8e879f;
     margin: 0;
     padding: 0;
 }
@@ -97,7 +97,6 @@ button:hover {
     border-radius: 0.5em;
     box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.05);
     align-items: center;
-    cursor: pointer;
 }
 
 .task:not(:first-child) {
@@ -118,6 +117,7 @@ button:hover {
     width: 20px;
     border-radius: 50%;
     border: 2px solid #e1e1e1;
+    cursor: pointer;
 }
 
 .task input[type="checkbox"]::before {
@@ -144,8 +144,8 @@ button:hover {
 
 .task span {
     font: 0.9em;
-    font-weight: 400;
     word-break: break-all;
+    color: #300363;
 }
 
 .task button {
@@ -190,29 +190,28 @@ button:hover {
     bottom: 20px;
     right: 20px;
     z-index: 999;
-  }
+}
 
-  #dark-mode-toggle {
+#dark-mode-toggle {
     display: none;
-  }
+}
 
-  /* Additional styling for the switch */
-  .switch {
+.switch {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
     border-radius: 17px;
     overflow: hidden;
-  }
+}
 
-  .switch input {
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
+}
 
-  .slider {
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -223,9 +222,9 @@ button:hover {
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 17px;
-  }
+}
 
-  .slider:before {
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -236,23 +235,22 @@ button:hover {
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 50%;
-  }
+}
 
-  input:checked + .slider {
+input:checked + .slider {
     background-color: #FA2E7C;
-  }
+}
 
-  input:focus + .slider {
+input:focus + .slider {
     box-shadow: 0 0 1px #150f11;
-  }
+}
 
-  input:checked + .slider:before {
+input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
+}
 
-  /* Text styles */
 .mode-text {
     font-family: "Poppins", sans-serif;
     font-size: 14px;
@@ -261,10 +259,6 @@ button:hover {
 }
 
 /* Dark mode styles */
-.dark-mode body {
-    background-color: #300363;
-}
-
 .dark-mode .container {
     background-color: #300363;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
@@ -337,4 +331,16 @@ button:hover {
 
 .dark-mode .mode-text {
     color: #e1e1e1;
+}
+
+.dark-mode .task {
+    background-color: #541E92
+}
+
+.dark-mode .task input[type="checkbox"] {
+    background-color: #ccc;
+}
+
+.dark-mode .task span{
+    color: #ccc;
 }
